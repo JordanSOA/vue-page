@@ -15,8 +15,8 @@
     "express": "^4.17.1"
   },
   "dependencies": {
-    "express":"*",
-    "body-parser":"*"
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
   }
   ,
   "engines": {
