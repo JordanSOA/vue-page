@@ -1,7 +1,11 @@
 <template>
-    <div id="home-bg">
-        <h2>MAIN PAGE</h2>
-    </div>
+<v-container>
+    <v-row >
+        <v-col align="center" >
+        <h2> {{ $t('message')}}</h2>
+        </v-col>
+    </v-row>
+</v-container>
 </template>
 
 <script>
