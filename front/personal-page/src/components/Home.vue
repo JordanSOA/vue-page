@@ -1,8 +1,11 @@
 <template>
-<v-container>
+<v-container style="height: 1000px;">
     <v-row >
         <v-col align="center" >
-        <h2> {{ $t('message')}}</h2>
+        <v-card tile color="secondary darken-1">
+        <h2 > {{ $t('message')}}</h2>
+        <v-btn @click="switchMode" outlined color="primary">Send</v-btn>
+        </v-card>
         </v-col>
     </v-row>
 </v-container>
@@ -10,7 +13,12 @@
 
 <script>
 export default {
-    name: 'Home'
+    name: 'Home',
+    methods: {
+        switchMode: function(){
+            console.log(this.$vuetify.theme.dark);
+        }
+    },
 }
 </script>
 
