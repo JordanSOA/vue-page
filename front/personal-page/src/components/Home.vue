@@ -2,7 +2,7 @@
 <v-container style="height: 1000px;">
     <v-row >
         <v-col align="center" >
-        <v-card tile color="secondary darken-1">
+        <v-card tile color="surface">
         <h2 > {{ $t('message')}}</h2>
         <v-btn @click="switchMode" outlined color="primary">Send</v-btn>
         </v-card>

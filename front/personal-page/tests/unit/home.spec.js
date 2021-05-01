@@ -3,13 +3,15 @@ import Home from '@/components/Home.vue'
 
 describe('Home.vue component Tests', () => {
     let wrapper
-
+    const $t = () => {}
+    
     beforeEach(() => {
-        wrapper = mount(Home);
+        wrapper = mount(Home, {
+            mocks:{ $t }
+        });
     })
 
     it('checks for component right name', () => {
-        console.log(process.env.VUE_APP_NAME);
         expect(wrapper.name()).toMatch('Home');
     })
 })
