@@ -1,18 +1,18 @@
-import mount  from '@vue/test-utils'
+import {shallowMount, createLocalVue}  from '@vue/test-utils'
 import PictureCard from '@/components/PictureCard.vue'
 import i18n from '../../src/plugins/i18n'
+import VueI18n from 'vue-i18n'
 
-
+const localVue = new createLocalVue();
+localVue.use(VueI18n);
 
 describe('PictureCard.vue component Tests', () => {
     let wrapper
-    const $t = (key) => key;
-    
-    beforeEach(() => {
 
-        wrapper = mount(PictureCard, {
-            i18n,
-            mocks:{ $t }
+    beforeEach(() => {
+        wrapper = shallowMount(PictureCard, {
+            localVue,
+            i18n
         });
     })
 
@@ -29,6 +29,7 @@ describe('PictureCard.vue component Tests', () => {
         const myNameWrapper = wrapper.find('.myName');
         expect(myNameWrapper.html()).toMatch(control);
     })
+
     it('checks for short description with traduction', async () => {
         const controlFr = 'Développeur web';
         const controlEn = 'web developer';
