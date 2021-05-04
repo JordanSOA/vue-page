@@ -1,5 +1,7 @@
 {
   "message": "hello i18n !!",
   "lang_FR": "in French",
-  "lang_GB": "in English"
+  "lang_GB": "in English",
+  "short_description1": "Web Developer, qualified  in \"Agile Methodologies\" with 2 years of experience in Front and Back End programming",
+  "short_description2": "Results-oriented web developer with the ability to work on the design, development and deployment of web applications from start to finish"
 }

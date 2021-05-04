@@ -1,18 +1,17 @@
 <template>
-<v-container style="height: 1000px;">
+<v-container >
     <v-row >
         <v-col align="center" >
-        <v-card tile color="surface">
-        <h2 > {{ $t('message')}}</h2>
-        <v-btn @click="switchMode" outlined color="primary">Send</v-btn>
-        </v-card>
+        <picture-card/>
         </v-col>
     </v-row>
 </v-container>
 </template>
 
 <script>
+import PictureCard from './PictureCard.vue';
 export default {
+    components: { PictureCard },
     name: 'Home',
     methods: {
         switchMode: function(){

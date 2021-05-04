@@ -1,12 +1,17 @@
-import { mount } from '@vue/test-utils'
+import mount  from '@vue/test-utils'
 import PictureCard from '@/components/PictureCard.vue'
+import i18n from '../../src/plugins/i18n'
+
+
 
 describe('PictureCard.vue component Tests', () => {
     let wrapper
-    const $t = () => {}
+    const $t = (key) => key;
     
     beforeEach(() => {
+
         wrapper = mount(PictureCard, {
+            i18n,
             mocks:{ $t }
         });
     })
@@ -17,20 +22,20 @@ describe('PictureCard.vue component Tests', () => {
 
     it('make sure picture is loaded', () => {
         const picWrapper = wrapper.find('.picture');
-        expect(picWrapper.exists).toBe(true)
+        expect(picWrapper.exists()).toBe(true)
     })
     it('Checks for my name', () => {
         const control = 'Jordan Soares';
         const myNameWrapper = wrapper.find('.myName');
         expect(myNameWrapper.html()).toMatch(control);
     })
-    it('checks for short description with traduction', () => {
-        const controlEn = 'Développeur Web, certifié en "Agilité" avec 2 ans d\'expérience dans la programmation Front et Back End. ';
-        const controlFr = 'Web Developer, qualified  in "Agility" with 2 years of experience in Front and Back End programming.';
+    it('checks for short description with traduction', async () => {
+        const controlFr = 'Développeur web';
+        const controlEn = 'web developer';
         const shortDescWrapper = wrapper.find('.shortDesc');
-        expect(shortDescWrapper.html()).toMatch(controlFr);
-        wrapper.vm.$i18n.locale = 'en';
+        expect(shortDescWrapper.html()).toContain(controlEn);
+        wrapper.vm.$i18n.locale = 'fr';
         await wrapper.vm.$nextTick();
-        expect(shortDescWrapper.html()).toMatch(controlEn);
+        expect(shortDescWrapper.html()).toContain(controlFr);
     })
 })
