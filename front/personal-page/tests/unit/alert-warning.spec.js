@@ -1,5 +1,10 @@
-import { mount }  from '@vue/test-utils'
+import { shallowMount, createLocalVue }  from '@vue/test-utils'
 import AlertWarning from '@/components/AlertWarning.vue'
+import i18n from '../../src/plugins/i18n'
+import VueI18n from 'vue-i18n'
+
+const localVue = new createLocalVue();
+localVue.use(VueI18n);
 
 describe('Warning alert component testing', () => {
     let wrapper
@@ -9,11 +14,14 @@ describe('Warning alert component testing', () => {
     let reachWrapper
 
     beforeEach(() => {
-        wrapper = mount(AlertWarning)
+        wrapper = shallowMount(AlertWarning, {
+            localVue,
+            i18n
+        });
         greetingsWrapper = wrapper.find('#greetings')
         sentence1Wrapper = wrapper.find('#first_sent')
         sentence2Wrapper = wrapper.find('#second_sent')
-        reachWrapper = wrapper.find('a > #reach')
+        reachWrapper = wrapper.find('#reach')
     })
 
     it('checks for component right name', () => {
