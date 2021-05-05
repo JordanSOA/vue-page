@@ -54,4 +54,11 @@ describe('Warning alert component testing', () => {
         expect(sentence2Wrapper.html()).toContain(controlFr[2])
         expect(reachWrapper.html()).toContain(controlFr[3])
     })
+
+    it('Click on link should call copytoClipboard function', async () => {
+        wrapper.vm.copyToClipboard = jest.fn()
+        await reachWrapper.trigger('click')
+        await wrapper.vm.$nextTick()
+        expect(wrapper.vm.copyToClipboard.mock.calls.length).toBe(1)
+    })
 })
