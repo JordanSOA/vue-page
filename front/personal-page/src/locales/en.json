@@ -1,7 +1,11 @@
 {
-  "message": "hello i18n !!",
+  "greetings": "Greetings dear visitor !",
   "lang_FR": "in French",
   "lang_GB": "in English",
   "short_description1": "Web Developer, qualified  in \"Agile Methodologies\" with 2 years of experience in Front and Back End programming",
-  "short_description2": "Results-oriented web developer with the ability to work on the design, development and deployment of web applications from start to finish"
+  "short_description2": "Results-oriented web developer with the ability to work on the design, development and deployment of web applications from start to finish",
+  "warning_sentence1": "Please do not be alarmed by the look of this page. This application will be constantly evolving",
+  "warning_sentence2": "Any bug report is welcome",
+  "reach_txt": "reach me",
+  "what_project": "Halfway between a portfolio and a CV, the prime purpose of this project is to expose information about my background, abilities, hobbies as well as achievements."
 }

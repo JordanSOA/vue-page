@@ -1,7 +1,11 @@
 {
-    "message": "Salut i18n !!",
+    "greetings": "Salutations chère visiteuse, cher visiteur !",
     "lang_FR": "en Français",
     "lang_GB": "en Anglais",
     "short_description1": "Développeur Web, certifié en \"Agilité\" avec 2 ans d'expérience dans la programmation Front et Back End",
-    "short_description2": "Développeur web axé sur les résultats, apte à concevoir, développer et déployer des applications web du début à la fin"
+    "short_description2": "Développeur web axé sur les résultats, apte à concevoir, développer et déployer des applications web du début à la fin",
+	"warning_sentence1": "Je tiens à rappeler que cette page me sert de terrain d'exploration. Cette application sera en constante évolution",
+	"warning_sentence2": "Tout signalement de bogue est fortement apprécié",
+	"reach_txt": "contactez-moi",
+	"what_project": "À mi-chemin entre un portfolio et un CV, le principal objectif de ce projet est de présenter des éléments d'information sur mon parcours, mes capacités, mes loisirs ainsi que mes réalisations."
 }
