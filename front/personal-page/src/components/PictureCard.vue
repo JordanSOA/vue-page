@@ -3,7 +3,7 @@
     <v-card max-width="400" color="surface lighten-3" elevation="3">
         <v-img
         class="picture d-flex black--text "
-        src="../assets/persoPic.jpg"
+        :src="picturePath"
         >
         <v-container>
             <v-row class="d-flex flex-column">
@@ -43,7 +43,8 @@ export default {
     name: 'PictureCard',
     data: () => ({
         myName: "Jordan Soares",
-        show: false
+        show: false,
+        picturePath: require('../assets/img/persoPic.jpg')
     }),
 }
 </script>
