@@ -19,11 +19,6 @@ import PictureCard from './PictureCard.vue';
 export default {
     components: { PictureCard, AlertWarning },
     name: 'Home',
-    methods: {
-        switchMode: function(){
-            console.log(this.$vuetify.theme.dark);
-        }
-    },
 }
 </script>
 

@@ -4,6 +4,8 @@
         dismissible
         prominent
         outlined
+        color="primary"
+        class="error--text"
         dense
         elevation="5"
         icon="mdi-tools">
@@ -17,7 +19,7 @@
         {{$t('copy_cliboard')}}
         <template v-slot:action="{ attrs }">
             <v-btn
-            color="pink"
+            color="yellow accent-2"
             text
             timeout="3000"
             v-bind="attrs"
@@ -51,5 +53,8 @@ export default {
 </script>
 
 <style scoped>
-
+#reach {
+    font-weight: bold;
+    font-size: larger;
+}
 </style>

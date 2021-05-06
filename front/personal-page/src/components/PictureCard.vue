@@ -1,6 +1,6 @@
 <template>
 <div id="PictureCard">
-    <v-card max-width="400">
+    <v-card max-width="400" color="surface lighten-3" elevation="3">
         <v-img
         class="picture d-flex black--text "
         src="../assets/persoPic.jpg"
@@ -10,7 +10,7 @@
             <v-col  align="end">
                 <v-icon x-large color="primary" >mdi-language-javascript</v-icon>
                 <v-icon x-large color="primary">mdi-language-java</v-icon>
-                <h3 class="ma-1"> +2 years </h3>
+                <h3 class="ma-1"> +2 {{$t('years')}} </h3>
                 <h3 class="ma-1"> FullStack </h3>
             </v-col>
             <v-col class="mb-12">
@@ -30,7 +30,7 @@
         <v-expand-transition>
         <div v-show="show">
             <v-card-title class="myName"> {{ myName }} </v-card-title>
-            <v-divider></v-divider>
+            <v-divider color="purple"></v-divider>
             <v-card-title class="shortDesc text-left"> {{$t('short_description2')}}</v-card-title>
         </div>
     </v-expand-transition>

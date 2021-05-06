@@ -1,8 +1,8 @@
 <template>
-  <v-app id="app">
+  <v-app id="app" >
     <v-app-bar
       app
-      color="secondary lighten-2"
+      color="surface lighten-1"
       elevate-on-scroll
       v-scroll="onScroll"
     >
@@ -89,7 +89,7 @@ export default {
 </script>
 <style scoped>
 #app {
-  background-color: var(--v-secondary-lighten2);
+  background-color: var(--v-surface-darken1);
 }
 
 .rubberBand {
@@ -100,6 +100,7 @@ export default {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   }
+
 
   @-webkit-keyframes rubberBand {
   0% , 100%{
