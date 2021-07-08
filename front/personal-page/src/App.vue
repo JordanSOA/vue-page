@@ -16,21 +16,19 @@
           <v-icon >mdi-{{social.icon}}</v-icon>
         </v-chip>
       <v-spacer></v-spacer>
-      <v-toolbar-title v-if="$vuetify.breakpoint.xsOnly">Title</v-toolbar-title>
-      <v-toolbar-title v-else>LongTitle</v-toolbar-title>
-      <v-spacer></v-spacer>
         <v-checkbox class="pt-3"
         v-model="$vuetify.theme.dark"
         off-icon="mdi-moon-waning-crescent"
         on-icon="mdi-white-balance-sunny"
       ></v-checkbox>
-      <v-divider  vertical color="secondary" class="me-3" ></v-divider>
+      <v-divider  vertical :color="dividerColor" class="me-3" ></v-divider>
 
       <v-tooltip  v-for="lang in langs"
             :key="lang.name"
             bottom>
           <template v-slot:activator="{ on, attrs }">
             <v-btn 
+            class="langBtn"
             color="primary"
             :ref="lang.name"
             outlined
@@ -49,17 +47,19 @@
     <v-main >
       <Home/>
     </v-main>
+      <Footer/>
   </v-app>
 </template>
 
 <script>
 import Home from './components/Home';
 import i18n from './plugins/i18n'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    Home,
+    Home, Footer
   },
   data: () => ({
     langs: [
@@ -86,12 +86,20 @@ export default {
   },
   created(){
       this.darkMode = this.$vuetify.theme.dark;
+  }, 
+  computed: {
+    dividerColor: function(){
+      return this.$vuetify.theme.dark ? this.$vuetify.theme.themes.dark.primary : this.$vuetify.theme.themes.light.primary;
+    }
   }
 };
 </script>
 <style scoped>
 #app {
   background-color: var(--v-surface-darken1);
+}
+.langBtn {
+  margin-left: 1vw;
 }
 
 .rubberBand {

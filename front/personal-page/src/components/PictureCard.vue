@@ -30,7 +30,7 @@
         <v-expand-transition>
         <div v-show="show">
             <v-card-title class="myName"> {{ myName }} </v-card-title>
-            <v-divider color="purple"></v-divider>
+            <v-divider :color="dividerColor"></v-divider>
             <v-card-title class="shortDesc text-left"> {{$t('short_description2')}}</v-card-title>
         </div>
     </v-expand-transition>
@@ -46,6 +46,11 @@ export default {
         show: false,
         picturePath: require('../assets/img/persoPic.jpg')
     }),
+    computed: {
+        dividerColor: function(){
+            return this.$vuetify.theme.dark ? this.$vuetify.theme.themes.dark.primary : this.$vuetify.theme.themes.light.primary;
+    }
+    }
 }
 </script>
 

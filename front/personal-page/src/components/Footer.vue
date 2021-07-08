@@ -1,9 +1,11 @@
 <template>
-<div>
-<p class="footerDate">{{footerDate}}</p>
-<p class="myName">{{myName}}</p>
+<div class="footer">
+    <v-footer class="foot" padless>
+        <v-col cols="12" class="text-center">
+            <p class="footerDate">{{footerDate}} - <span class="myName">{{myName}}</span></p>
+        </v-col>
+    </v-footer>
 </div>
-
 </template>
 
 <script>
@@ -22,5 +24,10 @@ export default {
 </script>
 
 <style scoped>
-
+.foot{
+    border-top: 2px solid var(--v-primary-base);
+}
+.footerDate{
+    margin-bottom: 0px;
+}
 </style>

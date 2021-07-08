@@ -7,7 +7,7 @@
     </v-row>
     <v-row >
         <v-col align="center" >
-        <picture-card/>
+            <picture-card/>
         </v-col>
     </v-row>
 </v-container>
@@ -16,6 +16,7 @@
 <script>
 import AlertWarning from './AlertWarning.vue';
 import PictureCard from './PictureCard.vue';
+
 export default {
     components: { PictureCard, AlertWarning },
     name: 'Home',
