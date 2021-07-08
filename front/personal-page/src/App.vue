@@ -15,7 +15,9 @@
         text-color="white">
           <v-icon >mdi-{{social.icon}}</v-icon>
         </v-chip>
-
+      <v-spacer></v-spacer>
+      <v-toolbar-title v-if="$vuetify.breakpoint.xsOnly">Title</v-toolbar-title>
+      <v-toolbar-title v-else>LongTitle</v-toolbar-title>
       <v-spacer></v-spacer>
         <v-checkbox class="pt-3"
         v-model="$vuetify.theme.dark"
