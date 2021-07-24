@@ -2,16 +2,19 @@ import {shallowMount, createLocalVue}  from '@vue/test-utils'
 import PictureCard from '@/components/PictureCard.vue'
 import i18n from '../../src/plugins/i18n'
 import VueI18n from 'vue-i18n'
+import Vuetify from 'vuetify'
 
 const localVue = new createLocalVue();
 localVue.use(VueI18n);
+const vuetify = new Vuetify();
 
 describe('PictureCard.vue component Tests', () => {
-    let wrapper
+    let wrapper;
 
     beforeEach(() => {
         wrapper = shallowMount(PictureCard, {
             localVue,
+            vuetify,
             i18n
         });
     })
