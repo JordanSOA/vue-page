@@ -6,7 +6,7 @@
         right
         :vertical="$vuetify.breakpoint.smAndUp">
             <v-tab>
-                Gene
+                About Me
             </v-tab>
             <v-tab>
                 Skills
@@ -15,7 +15,7 @@
                 Socials
             </v-tab>
             <v-tab-item>
-                INFO GENE
+                <about-me-tab/>
             </v-tab-item>
             <v-tab-item>
                 SKILLS
@@ -29,7 +29,9 @@
 </template>
 
 <script>
+import AboutMeTab from './tabs/AboutMeTab.vue'
 export default {
+    components: { AboutMeTab },
 
 }
 </script>
