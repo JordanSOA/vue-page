@@ -1,23 +1,18 @@
 <template>
-<v-container >
+<v-container fluid>
     <v-row >
         <v-col align="center" >
             <alert-warning/>
         </v-col>
     </v-row>
     <v-row >
-        <v-col align="center" >
+        <v-col align="center" cols="12" md="4" >
             <picture-card/>
         </v-col>
-        <v-col align="center" >
+        <v-col align="center" cols="12" md="8" >
             <info-tabs/>
         </v-col>
     </v-row>
-    <!-- <v-row >
-        <v-col align="center" >
-            <info-tabs/>
-        </v-col>
-    </v-row> -->
 </v-container>
 </template>
 

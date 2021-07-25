@@ -6,13 +6,13 @@
         right
         :vertical="$vuetify.breakpoint.smAndUp">
             <v-tab>
-                About Me
+                {{$t("abt_me_title")}}
             </v-tab>
             <v-tab>
-                Skills
+                {{$t("skills_title")}}
             </v-tab>
             <v-tab>
-                Socials
+                {{$t("socials_title")}}
             </v-tab>
             <v-tab-item>
                 <about-me-tab/>
