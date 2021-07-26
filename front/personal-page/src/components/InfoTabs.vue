@@ -18,7 +18,7 @@
                 <about-me-tab/>
             </v-tab-item>
             <v-tab-item>
-                SKills
+                <skills-tab/>
             </v-tab-item>
             <v-tab-item>
                 <socials-tab/>
@@ -30,9 +30,10 @@
 
 <script>
 import AboutMeTab from './tabs/AboutMeTab.vue'
+import SkillsTab from './tabs/SkillsTab.vue'
 import SocialsTab from './tabs/SocialsTab.vue'
 export default {
-    components: { AboutMeTab ,SocialsTab},
+    components: { AboutMeTab ,SocialsTab, SkillsTab},
 
 }
 </script>

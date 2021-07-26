@@ -19,5 +19,16 @@
   "details_6": "English C2",
   "abt_me_title": "More details",
   "skills_title": "Skills",
-  "socials_title": "Socials"
+  "socials_title": "Socials",
+  "soft_skill1": "Flexibility",
+  "soft_skill2": "Accountability",
+  "soft_skill3": "Result oriented",
+  "soft_skill4": "Patience",
+  "soft_skill5": "Communication",
+  "other_skill1": "Oriented Object Programming",
+  "other_skill2": "Model-View-Controller architecture",
+  "other_skill3": "Unit Testing",
+  "other_skill4": "Agile-SCRUM",
+  "other_skill5": "CI/CD",
+  "other_skill6": "RestAPI"
 }
