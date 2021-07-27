@@ -49,12 +49,12 @@ export default {
     computed: {
         dividerColor: function(){
             return this.$vuetify.theme.dark ? this.$vuetify.theme.themes.dark.primary : this.$vuetify.theme.themes.light.primary;
-    }
+            }
     }
 }
 </script>
 
-<style>
+<style scoped>
 .shortDesc {
     word-break: keep-all !important;
 }
