@@ -3,6 +3,7 @@
     <v-card >
         <v-tabs
         center-active
+        show-arrows
         right
         :vertical="$vuetify.breakpoint.smAndUp">
             <v-tab>

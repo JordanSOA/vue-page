@@ -30,5 +30,8 @@
   "other_skill3": "Unit Testing",
   "other_skill4": "Agile-SCRUM",
   "other_skill5": "CI/CD",
-  "other_skill6": "RestAPI"
+  "other_skill6": "RestAPI",
+  "others": "others",
+  "tools": "Tools",
+  "all": "All"
 }
