@@ -10,6 +10,7 @@
             <picture-card/>
         </v-col>
         <v-col align="center" cols="12" md="8" >
+            <focus-point/>
             <info-tabs/>
         </v-col>
     </v-row>
@@ -18,10 +19,11 @@
 
 <script>
 import AlertWarning from './AlertWarning.vue';
+import FocusPoint from './FocusPoint.vue';
 import InfoTabs from './InfoTabs.vue';
 import PictureCard from './PictureCard.vue';
 export default {
-    components: { PictureCard, AlertWarning, InfoTabs, InfoTabs },
+    components: { PictureCard, AlertWarning, InfoTabs, FocusPoint, InfoTabs },
     name: 'Home',
 }
 </script>
