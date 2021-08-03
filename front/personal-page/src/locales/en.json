@@ -12,11 +12,12 @@
   "copy_cliboard": "Email address copied to clipboard",
   "close_txt": "Close",
   "details_1": "Parisian Region",
-  "details_2": "Job Seeking",
+  "details_2": "Has a Job",
   "details_3": "2 years XP",
   "details_4": "Diploma Advanced Technician",
   "details_5": "Agile/SCRUM",
   "details_6": "English C2",
+  "details_x2": "Job Seeking",
   "abt_me_title": "More details",
   "skills_title": "Skills",
   "socials_title": "Socials",
@@ -33,5 +34,8 @@
   "other_skill6": "RestAPI",
   "others": "others",
   "tools": "Tools",
-  "all": "All"
+  "all": "All",
+  "focus_txt_1": "Software Engineer who enjoys building nifty and robust solutions",
+  "focus_txt_2": "Can adapt quickly with suitable communication",
+  "focus_txt_3": "Able to deliver innovative insights into a variety of challenging situations"
 }

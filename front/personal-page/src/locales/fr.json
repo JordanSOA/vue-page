@@ -12,11 +12,12 @@
     "copy_cliboard": "Adresse électronique copiée dans le presse-papiers",
     "close_txt": "Fermer",
     "details_1": "Ile de France",
-    "details_2": "En Recherche",
+    "details_2": "En Poste",
     "details_3": "2 ans XP ",
     "details_4": "Titre Pro Niv3",
     "details_5": "Agile/SCRUM",
     "details_6": "Anglais C2",
+    "details_x2": "En Recherche",
     "abt_me_title": "Plus d’infos",
     "skills_title": "Compétences",
     "socials_title": "Réseaux Sociaux",
@@ -33,6 +34,8 @@
     "other_skill6": "RestAPI",
     "others": "autres",
     "tools": "Outils",
-    "all": "Tout"
-
+    "all": "Tout",
+    "focus_txt_1": "Ingénieur logiciel prenant plaisir à concevoir des solutions astucieuses et robustes",
+    "focus_txt_2": "Sait s'adapter rapidement avec une communication adaptée",
+    "focus_txt_3": "Capable d’apporter des idées créatives à des défis complexes"
 }
