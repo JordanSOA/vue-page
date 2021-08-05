@@ -1,6 +1,6 @@
 <template>
-    <v-card class="mb-3">
-        <v-container>
+    <v-card class="mt-3 focuspoint">
+        <v-container fluid>
             <v-row>
                 <v-list>
                     <v-list-item
@@ -27,6 +27,10 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.focuspoint{
+    border: 0.75vw double var(--v-primary-base);
+    width: fit-content;
+    height: fit-content;
+}
 </style>

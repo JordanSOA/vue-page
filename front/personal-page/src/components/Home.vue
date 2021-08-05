@@ -5,12 +5,12 @@
             <alert-warning/>
         </v-col>
     </v-row>
-    <v-row >
-        <v-col align="center" cols="12" md="4" >
+    <v-row justify="center" >
+        <v-col align="center" class="d-block d-md-flex justify-space-around" cols="12"  >
             <picture-card/>
-        </v-col>
-        <v-col align="center" cols="12" md="8" >
             <focus-point/>
+        </v-col>
+        <v-col align="center" cols="12" md="6" lg="8"  >
             <info-tabs/>
         </v-col>
     </v-row>
