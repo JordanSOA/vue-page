@@ -12,7 +12,6 @@
                             <p class="text-center">
                             {{$t('focus_txt_'+n)}}
                             </p>
-                        <!-- <v-list-item-title v-text="item"></v-list-item-title> -->
                         </v-list-item-content>
                     </v-list-item>
                 </v-list>

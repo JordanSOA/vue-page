@@ -37,5 +37,10 @@
   "all": "All",
   "focus_txt_1": "Software Engineer who enjoys building nifty and robust solutions",
   "focus_txt_2": "Can adapt quickly with suitable communication",
-  "focus_txt_3": "Able to deliver innovative insights into a variety of challenging situations"
+  "focus_txt_3": "Able to deliver innovative insights into a variety of challenging situations",
+  "dl_cv_text" : "Download CV",
+  "playground_test_title": "Give it a try",
+  "playground_btn_play": "PLAY",
+  "playground_subtitle": "It's really just simple code snippets I wrote in my early learning days",
+  "playground_up_text": "Let's play a bit"
 }

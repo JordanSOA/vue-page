@@ -10,7 +10,7 @@
             <v-col  align="end">
                 <v-icon x-large color="primary" >mdi-language-javascript</v-icon>
                 <v-icon x-large color="primary">mdi-language-java</v-icon>
-                <h3 class="ma-1"> +2 {{$t('years')}} </h3>
+                <h3 class="ma-1"> +3 {{$t('years')}} </h3>
                 <h3 class="ma-1"> FullStack </h3>
             </v-col>
             <v-col class="mb-12">
@@ -34,7 +34,7 @@
                 class="mb-2"
                 color="primary"
                 @click="openLink()">
-                {{dlCvIcon.label}}
+                {{$t('dl_cv_text')}}
                 </v-btn>
             <v-divider :color="dividerColor"></v-divider>
             <v-card-title class="shortDesc text-left"> {{$t('short_description2')}}</v-card-title>
@@ -53,8 +53,7 @@ export default {
         picturePath: require('../assets/img/persoPic.jpg'),
         dlCvIcon : {
             icon: 'mdi-file-pdf-box',
-            url: 'https://storage.googleapis.com/webdev_bucket/22CV.pdf',
-            label:'Télécharger CV '
+            url: 'https://storage.googleapis.com/webdev_bucket/22CV.pdf'
             }
     }),
     computed: {

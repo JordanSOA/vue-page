@@ -37,5 +37,10 @@
     "all": "Tout",
     "focus_txt_1": "Ingénieur logiciel prenant plaisir à concevoir des solutions astucieuses et robustes",
     "focus_txt_2": "Sait s'adapter rapidement avec une communication adaptée",
-    "focus_txt_3": "Capable d’apporter des idées créatives à des défis complexes"
+    "focus_txt_3": "Capable d’apporter des idées créatives à des défis complexes",
+    "dl_cv_text" : "Télécharger CV",
+    "playground_test_title": "A vous de jouer",
+    "playground_btn_play": "JOUER",
+    "playground_subtitle": "Il s'agit en fait de simples bouts de code que j'ai écrit dans mes premiers jours d'apprentissage",
+    "playground_up_text": "Jouons un peu"
 }
