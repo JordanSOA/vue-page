@@ -1,5 +1,5 @@
 <template>
-<div class="footer">
+<div class="footerC">
     <v-footer class="foot" padless>
         <v-col cols="12" class="text-center">
             <p class="footerDate">{{footerDate}} - <span class="myName">{{myName}}</span></p>
