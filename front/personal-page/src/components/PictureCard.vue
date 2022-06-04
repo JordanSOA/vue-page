@@ -1,5 +1,5 @@
 <template>
-<div id="PictureCard">
+<div class="PictureCard">
     <v-card max-width="400" color="surface lighten-3" elevation="3">
         <v-img
         class="picture d-flex black--text "

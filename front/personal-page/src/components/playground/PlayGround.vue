@@ -1,6 +1,6 @@
 <template>
 <v-card
-    class="mx-auto"
+    class="playgroundSection mx-auto"
   >
     <v-card-text>
       <div>{{$t('playground_up_text')}}</div>

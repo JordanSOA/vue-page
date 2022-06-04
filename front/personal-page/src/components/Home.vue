@@ -16,8 +16,11 @@
         <v-col align="center" cols="12" md="6"  >
             <play-ground/>
         </v-col>
+        <v-col align="center" cols="12" md="6"  >
+            <quotes-generator/>
+        </v-col>
     </v-row>
-
+    <NavFloat :onMobile="$vuetify.breakpoint.mobile" />
 </v-container>
 </template>
 
@@ -27,8 +30,10 @@ import FocusPoint from './FocusPoint.vue';
 import InfoTabs from './InfoTabs.vue';
 import PictureCard from './PictureCard.vue';
 import PlayGround from './playground/PlayGround.vue'
+import QuotesGenerator from './QuotesGenerator.vue'
+import NavFloat from './NavFloat.vue'
 export default {
-    components: { PictureCard, AlertWarning, InfoTabs, FocusPoint, InfoTabs, PlayGround },
+    components: { PictureCard, AlertWarning, InfoTabs, FocusPoint, InfoTabs, PlayGround, QuotesGenerator, NavFloat },
     name: 'Home',
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-<div class="tabs">
+<div class="tabsSection">
     <v-card >
         <v-tabs
         center-active
