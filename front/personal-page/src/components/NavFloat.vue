@@ -13,14 +13,14 @@
     <template v-slot:activator>
         <v-btn
         v-model="fab"
-        color="primary lighten-2"
+        color="secondary"
         dark
         fab>
           <v-icon v-if="fab">
             mdi-close
           </v-icon>
           <v-icon v-else>
-            mdi-account-circle
+            mdi-menu
           </v-icon>
         </v-btn>
       </template>
@@ -29,6 +29,7 @@
         dark
         small
         elevation="5"
+        color="secondary darken-1"
         @click="$vuetify.goTo('.footerC')">
         <v-icon>mdi-arrow-down-drop-circle</v-icon>
       </v-btn>
@@ -37,6 +38,7 @@
         dark
         small
         elevation="5"
+        color="secondary lighten-1"
         @click="$vuetify.goTo('.quotes-generator')">
         <v-icon>mdi-basketball</v-icon>
       </v-btn>
@@ -45,6 +47,7 @@
         dark
         small
         elevation="5"
+        color="secondary lighten-1"
         @click="$vuetify.goTo('.playgroundSection')">
         <v-icon>mdi-seesaw</v-icon>
       </v-btn>
@@ -53,6 +56,7 @@
         dark
         small
         elevation="5"
+        color="secondary lighten-1"
         @click="$vuetify.goTo('.tabsSection')">
         <v-icon>mdi-card-account-details</v-icon>
       </v-btn>
@@ -61,6 +65,7 @@
         dark
         small
         elevation="5"
+        color="secondary lighten-1"
         @click="$vuetify.goTo('.focuspoint')">
         <v-icon>mdi-star</v-icon>
       </v-btn>
@@ -69,6 +74,7 @@
         dark
         small
         elevation="5"
+        color="secondary lighten-1"
         @click="$vuetify.goTo('.PictureCard')"
       >
         <v-icon>mdi-account</v-icon>
@@ -77,6 +83,7 @@
         fab
         small
         elevation="5"
+        color="secondary darken-1"
         @click="$vuetify.goTo(0)"
       >
         <v-icon> mdi-arrow-up-drop-circle </v-icon>
