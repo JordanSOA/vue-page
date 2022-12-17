@@ -14,7 +14,6 @@
             <p id="second_sent">
             {{ $t('warning_sentence2') }} , <a @click.stop.prevent="copyToClipboard" id="reach">{{ $t('reach_txt') }}</a>.
             </p>
-            <p class="text-decoration-underline">MIGRATION : this Heroku app will be offline. A new link will be provided to you before 28/11/22</p>
     </v-alert>
     <v-snackbar v-model="snackbar">
         {{$t('copy_cliboard')}}
