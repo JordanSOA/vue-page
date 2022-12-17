@@ -50,7 +50,7 @@ export default {
     data: () => ({
         myName: "Jordan Soares",
         show: false,
-        picturePath: require('../assets/img/persoPic.jpg'),
+        picturePath: 'https://storage.googleapis.com/webdev_bucket/persoPic.5180032d.jpg',
         dlCvIcon : {
             icon: 'mdi-file-pdf-box',
             url: 'https://storage.googleapis.com/webdev_bucket/22CV.pdf'
