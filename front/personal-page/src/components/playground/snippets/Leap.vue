@@ -48,6 +48,7 @@
                     <v-col cols="12" md="4" sm="3">
                     <label for="leapInput"> Enter a year </label>
                     <input
+                    class="inputPG"
                         v-model.number="leapInput"
                         outlined
                         name="leapInput"
@@ -94,3 +95,10 @@ export default {
         },
     }
 </script>
+
+<style scoped>
+.inputPG {
+  border-style: solid;
+  border-color: var(--v-primary-base) !important;
+}
+</style>

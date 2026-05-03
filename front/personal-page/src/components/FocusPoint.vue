@@ -4,7 +4,7 @@
             <v-row>
                 <v-list>
                     <v-list-item
-                    v-for="n in 3" :key="n">
+                    v-for="n in 4" :key="n">
                         <v-list-item-icon>
                             <v-icon color="primary">mdi-star-four-points</v-icon>
                         </v-list-item-icon>

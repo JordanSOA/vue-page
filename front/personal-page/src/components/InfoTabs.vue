@@ -15,6 +15,9 @@
             <v-tab>
                 {{$t("socials_title")}}
             </v-tab>
+            <!-- <v-tab>
+                Fun Stuff
+            </v-tab> -->
             <v-tab-item>
                 <about-me-tab/>
             </v-tab-item>
@@ -24,6 +27,9 @@
             <v-tab-item>
                 <socials-tab/>
             </v-tab-item>
+            <!-- <v-tab-item>
+                <fun-stuff-tab></fun-stuff-tab>
+            </v-tab-item> -->
         </v-tabs>
     </v-card>
 </div>
@@ -31,10 +37,11 @@
 
 <script>
 import AboutMeTab from './tabs/AboutMeTab.vue'
+// import FunStuffTab from './tabs/FunStuffTab.vue'
 import SkillsTab from './tabs/SkillsTab.vue'
 import SocialsTab from './tabs/SocialsTab.vue'
 export default {
-    components: { AboutMeTab ,SocialsTab, SkillsTab},
+    components: { AboutMeTab ,SocialsTab, SkillsTab/*, FunStuffTab*/},
 
 }
 </script>

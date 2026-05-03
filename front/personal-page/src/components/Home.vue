@@ -13,11 +13,17 @@
         <v-col align="center" cols="12" md="6"  >
             <info-tabs/>
         </v-col>
+        <v-col v-if="$vuetify.breakpoint.mobile" align="center" cols="12" md="12"  >
+            <recap/>
+        </v-col>
         <v-col align="center" cols="12" md="6"  >
             <play-ground/>
         </v-col>
         <v-col align="center" cols="12" md="6"  >
             <quotes-generator/>
+        </v-col>
+        <v-col v-if="!$vuetify.breakpoint.mobile" align="center" cols="12" md="12"  >
+            <recap/>
         </v-col>
     </v-row>
     <NavFloat :onMobile="$vuetify.breakpoint.mobile" />
@@ -29,11 +35,12 @@ import AlertWarning from './AlertWarning.vue';
 import FocusPoint from './FocusPoint.vue';
 import InfoTabs from './InfoTabs.vue';
 import PictureCard from './PictureCard.vue';
-import PlayGround from './playground/PlayGround.vue'
+// import PlayGround from './playground/PlayGround.vue'
 import QuotesGenerator from './QuotesGenerator.vue'
 import NavFloat from './NavFloat.vue'
+import Recap from './Recap.vue';
 export default {
-    components: { PictureCard, AlertWarning, InfoTabs, FocusPoint, InfoTabs, PlayGround, QuotesGenerator, NavFloat },
+    components: { PictureCard, AlertWarning, InfoTabs, FocusPoint, InfoTabs, QuotesGenerator, NavFloat, Recap },
     name: 'Home',
 }
 </script>

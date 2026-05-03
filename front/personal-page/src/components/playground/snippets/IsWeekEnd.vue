@@ -41,6 +41,7 @@
                 <v-col cols="12" md="6">
                 <label for="dayIpt"> Enter a day number </label>
                 <input
+                class="inputPG"
                     v-model.number="dayIpt"
                     outlined
                     placeholder="Between 1 and 31"
@@ -51,6 +52,7 @@
                 <v-col cols="12" md="6">
                 <label for="monthIpt"> Enter a month number </label>
                 <input
+                class="inputPG"
                     v-model.number="monthIpt"
                     outlined
                     placeholder="Between 1 and 12"
@@ -61,6 +63,7 @@
                 <v-col cols="12" md="6">
                 <label for="startYearIpt"> Enter a start year </label>
                 <input
+                class="inputPG"
                     v-model.number="startYearIpt"
                     outlined
                     placeholder="1994"
@@ -71,6 +74,7 @@
                 <v-col cols="12" md="6">
                 <label for="endYearIpt"> Enter a end year </label>
                 <input
+                class="inputPG"
                     v-model.number="endYearIpt"
                     outlined
                     placeholder=" 2014"
@@ -176,3 +180,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.inputPG {
+  border-style: solid;
+  border-color: var(--v-primary-base) !important;
+}
+</style>

@@ -10,7 +10,7 @@
             <v-col  align="end">
                 <v-icon x-large color="primary" >mdi-language-javascript</v-icon>
                 <v-icon x-large color="primary">mdi-language-java</v-icon>
-                <h3 class="ma-1"> +3 {{$t('years')}} </h3>
+                <h3 class="ma-1"> +5 {{$t('years')}} </h3>
                 <h3 class="ma-1"> FullStack </h3>
             </v-col>
             <v-col class="mb-12">
@@ -53,7 +53,8 @@ export default {
         picturePath: 'https://storage.googleapis.com/webdev_bucket/persoPic.5180032d.jpg',
         dlCvIcon : {
             icon: 'mdi-file-pdf-box',
-            url: 'https://storage.googleapis.com/webdev_bucket/22CV.pdf'
+            frLink: 'https://storage.googleapis.com/webdev_bucket/23CVFR.pdf',
+            enLink: 'https://storage.googleapis.com/webdev_bucket/23CVEN.pdf'
             }
     }),
     computed: {
@@ -62,7 +63,8 @@ export default {
             }
             ,
         openLink : function(){
-            return window.open(this.dlCvIcon.url)
+            const properLangVersionCV = this.$i18n.locale === 'en' ? this.dlCvIcon.enLink : this.dlCvIcon.frLink ;
+            return window.open(properLangVersionCV);
         }
     }
 }

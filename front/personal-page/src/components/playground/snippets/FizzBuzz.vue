@@ -41,6 +41,8 @@
                 <label for="fizzBuzzInput"> Enter a limit Number </label>
                 <input
                   v-model.number="fizzBuzzInput"
+                  class="inputPG rounded-pill"
+                  :class="inputPGTextColorize"
                   name="fizzBuzzInput"
                   type="number"
                   :max="500"/>
@@ -92,9 +94,12 @@ export default {
                 })}`,
         }),
     computed: {
-        fizzBuzzResponse() {
+        fizzBuzzResponse: function() {
             return this.fizzBuzzMethod(this.fizzBuzzInput);
-            }
+            },
+          inputPGTextColorize: function() {
+            return this.$vuetify.theme.dark ? 'font-color : white' : '';
+          }
     },
     methods: {
         fizzBuzzMethod: function (num) {
@@ -116,3 +121,9 @@ export default {
     },
 }
 </script>
+<style scoped>
+.inputPG {
+  border-style: solid;
+  border-color: var(--v-primary-base) !important;
+}
+</style>

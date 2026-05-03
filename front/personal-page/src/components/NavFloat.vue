@@ -42,7 +42,7 @@
         @click="$vuetify.goTo('.quotes-generator')">
         <v-icon>mdi-basketball</v-icon>
       </v-btn>
-      <v-btn
+      <!-- <v-btn
         fab
         dark
         small
@@ -50,7 +50,7 @@
         color="secondary lighten-1"
         @click="$vuetify.goTo('.playgroundSection')">
         <v-icon>mdi-seesaw</v-icon>
-      </v-btn>
+      </v-btn> -->
       <v-btn
         fab
         dark
