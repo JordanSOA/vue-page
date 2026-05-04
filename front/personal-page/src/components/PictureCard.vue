@@ -61,7 +61,8 @@ export default {
         dividerColor: function(){
             return this.$vuetify.theme.dark ? this.$vuetify.theme.themes.dark.primary : this.$vuetify.theme.themes.light.primary;
             }
-            ,
+    },
+    methods: {
         openLink : function(){
             const properLangVersionCV = this.$i18n.locale === 'en' ? this.dlCvIcon.enLink : this.dlCvIcon.frLink ;
             return window.open(properLangVersionCV);
