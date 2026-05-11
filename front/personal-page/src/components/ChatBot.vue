@@ -66,16 +66,22 @@ export default {
     }
   },
   data: () => ({
-    messages: [
-      { 
-        role: 'bot', 
-        text: 'Bonjour! 👋 Je suis votre assistant AI. Comment puis-je vous aider?' 
-      }
-    ],
+    messages: [],
     newMessage: '',
     isLoading: false,
-    messagesContainer: null
+    messagesContainer: null,
+    sessionId: null
   }),
+  mounted() {
+    // Initialize the greeting message after i18n is fully ready
+    this.sessionId = this.generateSessionId();
+    this.messages = [
+      { 
+        role: 'bot', 
+        text: this.$t("tell_me_more")
+      }
+    ];
+  },
   watch: {
     isOpen(newVal) {
       if (newVal) {
@@ -160,21 +166,64 @@ export default {
       if (!this.newMessage.trim() || this.isLoading) return;
 
       this.messages.push({ role: 'user', text: this.newMessage });
-      const currentInput = this.newMessage;
+      const userInput = this.newMessage;
       this.newMessage = '';
 
       this.isLoading = true;
       this.scrollToBottom();
 
-      // Simulate bot response
-      setTimeout(() => {
-        this.isLoading = false;
-        this.messages.push({
-          role: 'bot',
-          text: `Vous avez demandé: "${currentInput}". Je suis en train de traiter votre demande...`
+      // Make API call to the chatbot webhook
+      const myHeaders = new Headers();
+      myHeaders.append("SessionID", this.sessionId);
+      myHeaders.append("Content-Type", "application/json");
+
+      const requestBody = JSON.stringify({
+        chatInput: userInput
+      });
+
+      const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: requestBody,
+        redirect: "follow"
+      };
+
+      fetch("https://n8n.srv765524.hstgr.cloud/webhook-test/86c2d6f4-f995-4f80-a545-e4a89c3dc77c", requestOptions)
+        .then((response) => response.text())
+        .then((result) => {
+          this.isLoading = false;
+          try {
+            // Parse the JSON response
+            const parsedResult = JSON.parse(result);
+            // Extract the output from the first element of the array
+            const botOutput = parsedResult[0]?.output || 'No response from server';
+            this.messages.push({
+              role: 'bot',
+              text: botOutput
+            });
+          } catch (parseError) {
+            // If parsing fails, display the raw result
+            console.error('JSON Parse Error:', parseError);
+            this.messages.push({
+              role: 'bot',
+              text: result || 'Unable to parse response'
+            });
+          }
+          this.scrollToBottom();
+        })
+        .catch((error) => {
+          this.isLoading = false;
+          console.error('ChatBot Error:', error);
+          this.messages.push({
+            role: 'bot',
+            text: `❌ Error: ${error.message || 'Failed to connect to the server. Please try again.'}`
+          });
+          this.scrollToBottom();
         });
-        this.scrollToBottom();
-      }, 1500);
+    },
+    generateSessionId() {
+      // Generate a unique session ID using timestamp and random number
+      return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     },
     closeChatBot() {
       this.$emit('close');
